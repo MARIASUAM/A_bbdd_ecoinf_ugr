@@ -84,4 +84,8 @@ La evaluación de este ejercicio se realizará siguiendo las siguientes fases, q
 
 
 
-+ **Segunda ronda de evaluación:** Los alumnos rehacen el ejercicio teniendo en cuenta el nuevo conocimiento adquirido. La calificación se obtiene a partir de esta segunda entrega.
++ **Segunda ronda de evaluación:** Los alumnos rehacen el ejercicio teniendo en cuenta el nuevo conocimiento adquirido. 
+
+
+
+**Ojo: este ejercicio no cuenta en la calificación de la asignatura. Se evalúa su desempeño, pero no cuenta para la nota**
