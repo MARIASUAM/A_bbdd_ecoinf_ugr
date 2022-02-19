@@ -9,9 +9,10 @@
 
 ## Objetivos del ejercicio
 
-Esta actividad tiene el siguiente objetivo de aprendizaje:
+Esta actividad tiene los siguientes objetivos de aprendizaje:
 
-Trasladar el conocimiento adquirido sobre la construcción de bases de datos a un caso de estudio concreto y real. Esto permitirá entrenar dichos conocimientos y contribuirá a que se afiancen en vuestra memoria a largo plazo. 
++ Trasladar el conocimiento adquirido sobre la construcción de bases de datos a un caso de estudio concreto y real. Esto permitirá entrenar dichos conocimientos y contribuirá a que se afiancen en vuestra memoria a largo plazo. 
++ Fomentar la metacognición (capacidad de tomar conciencia de cómo aprendemos). El hecho de "corregir" el ejercicio de manera conjunta permite a los estudiantes identficar sus propios errores cuando ven explícitamente los de otros compañeros. Esta habilidad es muy útil en la vida cotidiana.
 
 ## Tareas a realizar
 
@@ -19,7 +20,7 @@ Lee atentamente el siguiente texto:
 
 Imagina que te contratan para trabajar en la Red de Información Ambiental de Andalucía para construir una base de datos que permita almacenar información sobre un mapa de vegetación. Dicho mapa consta de dos metodologías complementarias, cada una de las cuales tiene una componente geográfica y otra alfanumérica. Son las siguientes:
 
-+ Fotointerpretación de la vegetación: Consiste en identificar manchas de vegetación homogéneas para una serie de variables estructurales (cobertura del estrato arbóreo, arbustivo, herbáceo, porcentaje de suelo desnudo y formación vegetal). Cada fotointérprete va dibujando polígonos en un SIG y les va asignando los valores de las variables anteriores. El parámetro de densidad se estima con rangos numéricos (Ausente, 1-25%, 26-50%, 51-75% y 76-100%). La formación vegetal se obtiene de una lista de formaciones vegetales de Andalucía. También se registra el nombre de la persona que delimita cada polígono. La escala de trabajo es 1:10.000.
++ Fotointerpretación de la vegetación: Consiste en identificar manchas de vegetación homogéneas para una serie de variables estructurales (cobertura del estrato arbóreo, arbustivo, herbáceo, porcentaje de suelo desnudo y formación vegetal). Cada fotointérprete va dibujando polígonos en un SIG y les va asignando los valores de las variables anteriores. El parámetro de cobertura se estima con rangos numéricos (Ausente, 1-25%, 26-50%, 51-75% y 76-100%). La formación vegetal se obtiene de una lista de formaciones vegetales de Andalucía. También se registra el nombre de la persona que delimita cada polígono. La escala de trabajo es 1:10.000.
 
 + Muestreos fitosociológicos: En virtud de la caracterización espacial obtenida anteriormente, se diseña un trabajo de campo que consiste en hacer muestreos fitosociológicos en una serie de puntos del territorio. En cada muestreo (caracterizado por un punto), se evalúan la presencia y abundancia de todas las especies vegetales existentes en un radio de xx m desde el centro de la parcela. La presencia de las especies se registra a través de un listado de taxones de Andalucía. Su abundancia se codifica según el criterio de Braun-Blanquet (búscalo en internet si no sabes lo que es). Cada muestreo es realizado por un equipo de personas cuyo número es variable. También es importante tener en cuenta que cada punto puede ser visitado en varias ocasiones. 
 
@@ -66,3 +67,10 @@ La evaluación de este ejercicio se realizará siguiendo las siguientes fases, q
 + **Primera entrega**: Los alumnos entregan el ejercicio solicitado usando el conocimiento adquirido en las sesiones teóricas.
 + **Sesión de evaluación conjunta del ejercicio:** El profesor realiza el ejercicio junto con los alumnos. Definimos una estructura de datos que sea compatible con el enunciado del ejercicio. 
 
+
+
+## Vídeo sesión de análisis de resultados
+
+El siguiente vídeo muestra cómo revisamos juntos todos las bases de datos entregadas. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bGCecGj_JcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
