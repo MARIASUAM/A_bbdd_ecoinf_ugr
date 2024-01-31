@@ -3,15 +3,16 @@
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
-<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
 .mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background: inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
@@ -19,16 +20,14 @@ a:active, a:hover { outline: 0px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
 .typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
 .typora-export .task-list-item input { pointer-events: none; }
-@media screen and (max-width: 500px) { 
+@media screen and (max-width: 500px) {
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
-  .CodeMirror-sizer { margin-left: 0px !important; }
-  .CodeMirror-gutters { display: none !important; }
 }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
 img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
-button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-size-adjust: inherit; font-kerning: inherit; font-variant-alternates: inherit; font-variant-ligatures: inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-position: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-variation-settings: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
@@ -46,17 +45,17 @@ h6 { font-size: 1rem; }
 .hidden { display: none; }
 .md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
 a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
 sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
 figure > table { margin: 0px; }
-tr { break-inside: avoid; break-after: auto; }
+thead, tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
 table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
-.CodeMirror-linenumber { }
+.CodeMirror-gutters { border-right-width: 0px; border-right-style: none; border-right-color: currentcolor; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
 .CodeMirror { text-align: left; }
 .CodeMirror-placeholder { opacity: 0.3; }
 .CodeMirror pre { padding: 0px 4px; }
@@ -66,16 +65,17 @@ div.hr:focus { cursor: none; }
 #write.fences-no-line-wrapping pre { white-space: pre; }
 #write pre.ty-contain-cm { white-space: normal; }
 .CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
 .md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
 #write .md-fences.mock-cm { white-space: pre-wrap; }
 .md-fences.md-fences-with-lineno { padding-left: 0px; }
 #write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
 .md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
 .CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
 li .mathjax-block, li p { margin: 0.5rem 0px; }
@@ -85,18 +85,20 @@ blockquote > :last-child { margin-bottom: 0px; }
 blockquote > :first-child, li > :first-child { margin-top: 0px; }
 .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
 #write .footnote-line { white-space: pre-wrap; }
-@media print { 
+@media print {
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
-  .typora-export * { -webkit-print-color-adjust: exact; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
   .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
 p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
 #write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
 p > .md-image:only-child { display: inline-block; width: 100%; }
@@ -107,9 +109,9 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 [contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: medium; }
 .math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
 .md-toc-content { position: relative; margin-left: 0px; }
 .md-toc-content::after, .md-toc::after { display: none; }
 .md-toc-item { display: block; color: rgb(65, 131, 196); }
@@ -122,7 +124,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 .md-toc-h4 .md-toc-inner { margin-left: 6em; }
 .md-toc-h5 .md-toc-inner { margin-left: 8em; }
 .md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) { 
+@media screen and (max-width: 48em) {
   .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
   .md-toc-h4 .md-toc-inner { margin-left: 5em; }
   .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
@@ -130,26 +132,27 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 }
 a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
 .footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
 .md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
-code { text-align: left; }
-a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: medium !important; border-style: none !important; border-color: currentcolor !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
 [lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
 [lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom-width: 0px; }
+table tr th { border-bottom-width: 0px; border-bottom-style: none; border-bottom-color: currentcolor; }
 video { max-width: 100%; display: block; margin: 0px auto; }
-iframe { max-width: 100%; width: 100%; border: none; }
+iframe { max-width: 100%; width: 100%; border: medium; }
 .highlight td, .highlight tr { border: 0px; }
-mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
 .md-expand mark .md-meta { opacity: 0.3 !important; }
 mark .md-meta { color: rgb(0, 0, 0); }
-@media print { 
+@media print {
   .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
 }
 .md-diagram-panel .messageText { stroke: none !important; }
@@ -157,24 +160,24 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
 .md-fences.md-fences-math { font-size: 1em; }
 .md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
-.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
 .typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
 .typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
 .typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
 .typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
-@media screen and (max-width: 1024px) { 
+@media screen and (max-width: 1024px) {
   .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
 }
-@media screen and (max-width: 800px) { 
+@media screen and (max-width: 800px) {
   .typora-export-sidebar { display: none; }
 }
-.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
 .outline-content ul { margin-top: 0px; margin-bottom: 0px; }
 .outline-content strong { font-weight: 400; }
-.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
-.outline-expander::before { content: ''; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-expander { width: 1rem; height: 1.428571rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
 .outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
-.outline-expander:hover::before { content: ''; }
+.outline-expander:hover::before { content: ""; }
 .outline-h1 > .outline-item { padding-left: 0px; }
 .outline-h2 > .outline-item { padding-left: 1em; }
 .outline-h3 > .outline-item { padding-left: 2em; }
@@ -186,19 +189,34 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
 .outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
 .outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
-.outline-item-open > .outline-item > .outline-expander::before { content: ''; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
 .outline-children { display: none; }
 .info-panel-tab-wrapper { display: none; }
 .outline-item-open > .outline-children { display: block; }
 .typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
 .typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
 .typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
-.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: '−'; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
 .typora-export-collapse-outline .outline-children { display: none; }
 .typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
 .typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
 .typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
 .md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left-width: 0.25em; border-left-style: solid; border-left-color: rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
 
 :root {
@@ -206,7 +224,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
     --control-text-color: #777;
 }
 
-@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
 
 /* open-sans-regular - latin-ext_latin */
   /* open-sans-italic - latin-ext_latin */
@@ -457,11 +475,8 @@ code {
     html {
         font-size: 13px;
     }
-    table,
     pre {
         page-break-inside: avoid;
-    }
-    pre {
         word-wrap: break-word;
     }
 }
@@ -557,6 +572,10 @@ header, .context-menu, .megamenu-content, footer{
     background-color: var(--side-bar-bg-color);
 }
 
+.mac-os #write{
+    caret-color: AccentColor;
+}
+
 .md-lang {
     color: #b4654d;
 }
@@ -593,6 +612,6 @@ header, .context-menu, .megamenu-content, footer{
 </style><title>ejercicio_bbdd</title>
 </head>
 <body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='ejercicio-sobre-bases-de-datos-construye-una-base-de-datos-a-partir-de-un-texto-descriptivo'><span>Ejercicio sobre bases de datos. Construye una base de datos a partir de un texto descriptivo.</span></h1><blockquote><ul><li><strong><em><span>Versión</span></em></strong><span>: 1.1</span></li><li><strong><em><span>Asignatura (titulación)</span></em></strong><span>: Ciclo de gestión del dato: ecoinformática (máster conservación, gestión y restauración de la biodiversidad. UGR). Curso 2021-2022</span></li><li><strong><em><span>Autor</span></em></strong><span>: Curro Bonet-García (fjbonet@uco.es)</span></li></ul></blockquote><p>&nbsp;</p><h2 id='objetivos-del-ejercicio'><span>Objetivos del ejercicio</span></h2><p><span>Esta actividad tiene los siguientes objetivos de aprendizaje:</span></p><ul><li><span>Trasladar el conocimiento adquirido sobre la construcción de bases de datos a un caso de estudio concreto y real. Esto permitirá entrenar dichos conocimientos y contribuirá a que se afiancen en vuestra memoria a largo plazo. </span></li><li><span>Fomentar la metacognición (capacidad de tomar conciencia de cómo aprendemos). El hecho de &quot;corregir&quot; el ejercicio de manera conjunta permite a los estudiantes identficar sus propios errores cuando ven explícitamente los de otros compañeros. Esta habilidad es muy útil en la vida cotidiana.</span></li></ul><h2 id='tareas-a-realizar'><span>Tareas a realizar</span></h2><p><span>Lee atentamente el siguiente texto:</span></p><p><span>Imagina que te contratan para trabajar en la Red de Información Ambiental de Andalucía para construir una base de datos que permita almacenar información sobre un mapa de vegetación. Dicho mapa consta de dos metodologías complementarias, cada una de las cuales tiene una componente geográfica y otra alfanumérica. Son las siguientes:</span></p><ul><li><span>Fotointerpretación de la vegetación: Consiste en identificar manchas de vegetación homogéneas para una serie de variables estructurales (cobertura del estrato arbóreo, arbustivo, herbáceo, porcentaje de suelo desnudo y formación vegetal). Cada fotointérprete va dibujando polígonos en un SIG y les va asignando los valores de las variables anteriores. El parámetro de cobertura se estima con rangos numéricos (Ausente, 1-25%, 26-50%, 51-75% y 76-100%). La formación vegetal se obtiene de una lista de formaciones vegetales de Andalucía. También se registra el nombre de la persona que delimita cada polígono. La escala de trabajo es 1:10.000.</span></li><li><span>Muestreos fitosociológicos: En virtud de la caracterización espacial obtenida anteriormente, se diseña un trabajo de campo que consiste en hacer muestreos fitosociológicos en una serie de puntos del territorio. En cada muestreo (caracterizado por un punto), se evalúan la presencia y abundancia de todas las especies vegetales existentes en un radio de xx m desde el centro de la parcela. La presencia de las especies se registra a través de un listado de taxones de Andalucía. Su abundancia se codifica según el criterio de Braun-Blanquet (búscalo en internet si no sabes lo que es). Cada muestreo es realizado por un equipo de personas cuyo número es variable. También es importante tener en cuenta que cada punto puede ser visitado en varias ocasiones. </span></li></ul><p><span>Ahora deberás hacer lo siguiente:</span></p><ol start='' ><li><span>Construye un diagrama entidad-relación a partir de cada uno de los casos descritos más abajo. Identifica las entidades y los atributos importantes. Puedes poner los dos casos descritos en el mismo esquema o en dos difrentes. Usa powerpoint o diagrams.net para hacer el esquema. </span></li><li><span>Traduce el o los diagramas entidad-relación en una o dos estructuras de bases de datos relacionales, con sus tablas y campos. Puedes usar access o libreoffice para esto.</span></li></ol><p><span>Cuando lo tengas listo comprime los dos archivos y súbelos al classroom. Por favor, usa este esquema para nombrar el archivo comprimido: [tu_nombre]_[tus_apellidos].zip</span></p><p>&nbsp;</p><h2 id='evaluación'><span>Evaluación</span></h2><p><span>En la siguiente tabla podéis ver los criterios que se usarán para evaluar este ejercicio. Dicha rúbrica está basada en los pasos que hemos dado para construir la base de datos:</span></p><ol start='' ><li><span>Identificación de entidades, atributos de la realidad que queremos modelar, así como las relaciones entre los mismos.</span></li><li><span>Traducción de los elementos anteriores a una estructura interpretable por un gestor de bases de datos relacionales: tablas, campos, relaciones.</span></li></ol><div style="page-break-after: always; break-after: page;"></div><figure><table><thead><tr><th><span>Completitud de las entidades y sus atributos</span></th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th></tr></thead><tbody><tr><td><span>Se evalúa en qué medida has identificado bien las entidades contempladas en el texto descriptivo, así como sus correspondientes atributos.</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span>0.0</span></td><td><span>1.0</span></td><td><span>2.0</span></td><td><span>3.0</span></td><td><span>4.0</span></td><td><span>5.0</span></td></tr><tr><td>&nbsp;</td><td><span>No entrega</span></td><td><span>No identificación de variables ni de atributos</span></td><td><span>Mezcla de atributos con entidades</span></td><td><span>Correcta identificación de ambos conceptos</span></td><td><span>Identificación completa de atributos y entidades</span></td><td><span>Incorporas conceptos y/o atributos que mejoran la base de datos</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td><span>No has identificado correctamente ni los atributos ni las entidades.</span></td><td><span>Has mezclado ambos conceptos</span></td><td><span>Has diferenciado bien entre entidades y atributos, pero faltan alguno de cualquiera de ellos.</span></td><td><span>Están todos los atributos y entidades.</span></td><td><span>Además de considerar todos los conceptos y atributos del enunciado, lo has mejorado.</span></td></tr><tr><td><strong><span>Completitud de las relaciones entre entidades</span></strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>Se evalúa en qué medida has identificado bien las relaciones entre entidades.</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span>0.0</span></td><td><span>1.0</span></td><td><span>2.0</span></td><td><span>3.0</span></td><td><span>4.0</span></td><td><span>5.0</span></td></tr><tr><td>&nbsp;</td><td><span>No entrega</span></td><td><span>No has identificado correctamente ninguna relación.</span></td><td><span>Faltan muchas relaciones</span></td><td><span>Correcta identificación de relaciones</span></td><td><span>Identificación completa de relaciones</span></td><td><span>Incorporas nuevas relaciones que mejoran la base de datos.</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><span>Has incluído alguna relación, pero faltan muchas.</span></td><td><span>Has identificado adecuadamente la mayoría de las relaciones.</span></td><td><span>Están todas las relaciones y su cardinalidad es correcta.</span></td><td>&nbsp;</td></tr><tr><td><strong><span>Traducción del modelo entidad relación a un diagrama de bases de datos</span></strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>Se evalúa en qué medida has traducido el esquema de entidades-relaciones a un diagrama de tablas en una base de datos.</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span>0.0</span></td><td><span>1.0</span></td><td><span>2.0</span></td><td><span>3.0</span></td><td><span>4.0</span></td><td><span>5.0</span></td></tr><tr><td>&nbsp;</td><td><span>No entrega.</span></td><td><span>Muy incompleta traducción de entidades/atributos a tablas/campos</span></td><td><span>Incompleta asignación de entidades/atributos a tablas/campos</span></td><td><span>Correcta traducción de entidades/atributos a tablas/campos</span></td><td><span>Traducción completa</span></td><td><span>Incorporas nuevas tablas y campos que mejoran la estructura.</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><span>Has traducido bien algunos elementos, pero faltan muchos.</span></td><td><span>Están realizadas correctamente casi todas las asignaciones entidad/atributo a tabla/campo.</span></td><td><span>Todas las entidades y sus atributos han sido traducidos a tablas y a campos.</span></td><td>&nbsp;</td></tr></tbody></table></figure><p>&nbsp;</p><p><span>Usaré esta rúbrica para evaluar tu trabajo, pero la nota no se usará en la calificación de la asignatura.</span></p><p><span>La evaluación de este ejercicio se realizará siguiendo las siguientes fases, que se basan en la idea de re-evaluación y análisis en grupo de resultados.</span></p><ul><li><strong><span>Primera entrega</span></strong><span>: Los alumnos entregan el ejercicio solicitado usando el conocimiento adquirido en las sesiones teóricas.</span></li><li><strong><span>Sesión de evaluación conjunta del ejercicio:</span></strong><span> El profesor realiza el ejercicio junto con los alumnos. Definimos una estructura de datos que sea compatible con el enunciado del ejercicio. </span></li></ul><p>&nbsp;</p><h2 id='vídeo-sesión-de-análisis-de-resultados'><span>Vídeo sesión de análisis de resultados</span></h2><p><span>El siguiente vídeo muestra cómo revisamos juntos todos las bases de datos entregadas. </span></p><iframe width="560" height="315" src="https://www.youtube.com/embed/bGCecGj_JcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div></div>
+<div id='write'  class=''><h1 id='ejercicio-sobre-bases-de-datos-construye-una-base-de-datos-a-partir-de-un-texto-descriptivo'><span>Ejercicio sobre bases de datos. Construye una base de datos a partir de un texto descriptivo.</span></h1><blockquote><ul><li><p><strong><em><span>Versión</span></em></strong><span>: 2023-2024</span></p></li><li><p><strong><em><span>Asignatura (titulación)</span></em></strong><span>: Ciclo de gestión del dato: ecoinformática (máster conservación, gestión y restauración de la biodiversidad. UGR) </span></p></li><li><p><strong><em><span>Autor</span></em></strong><span>:  María Suárez Muñoz (bv2sumum@uco.es) y Curro Bonet García</span></p></li></ul></blockquote><p>&nbsp;</p><h2 id='objetivos-del-ejercicio'><span>Objetivos del ejercicio</span></h2><p><span>Esta actividad tiene los siguientes objetivos de aprendizaje:</span></p><ul><li><p><span>Afianzar el conocimiento adquirido en clase sobre bases de datos relacionales.</span></p></li><li><p><span>Trasladar el conocimiento adquirido sobre la construcción de bases de datos a un caso de estudio concreto y real. Esto permitirá entrenar dichos conocimientos y contribuirá a que se afiancen en vuestra memoria a largo plazo. </span></p></li><li><p><span>Mejorar la capacidad para recopilar, almacenar, acceder y compartir datos relevantes para analizar información ambiental.</span></p></li><li><p><span>Fomentar la metacognición (capacidad de tomar conciencia de cómo aprendemos). El hecho de &quot;corregir&quot; el ejercicio de manera conjunta permite a los estudiantes identficar sus propios errores cuando ven explícitamente los de otros compañeros. Esta habilidad es muy útil en la vida cotidiana.</span></p></li></ul><h2 id='tareas-a-realizar'><span>Tareas a realizar</span></h2><p><span>Para practicar un poco más con la creación y construcción de bases de datos relacionales se propone un ejercicio consistente en crear una base de datos sencilla, elaborando y describiendo los pasos necesarios para ello. Para construir la base de datos podéis utilizar el conjunto de datos, el proceso o la información que os resulte más útil e interesante. Podéis pensar en información que estáis recopilando para algún trabajo de clase o vuestro TFM, en vuestra colección de arácnidos, en vuestro perfil de Spotify... Pero si no tenéis algún conjunto de datos que os resulte práctico utilizar podéis utilizar esta descripción:</span></p><p><em><span>&quot;Muestreos fitosociológicos: Se diseña un trabajo de campo que consiste en hacer muestreos fitosociológicos en una serie de puntos del territorio. En cada muestreo (caracterizado por un punto), se evalúan la presencia y abundancia de todas las especies vegetales existentes en un radio de xx m desde el centro de la parcela. La presencia de las especies se registra a través de un listado de taxones de Andalucía. Su abundancia se codifica según el criterio de Braun-Blanquet (búscalo en internet si no sabes lo que es). Cada muestreo es realizado por un equipo de personas cuyo número es variable. También es importante tener en cuenta que cada punto puede ser visitado en varias ocasiones&quot;.</span></em></p><p><span>Ahora os pedimos que elaboréis:</span></p><ol start='' ><li><p><span>Una descripción literal de vuestra base de datos. Esta descripción en forma de texto deberá explicar en detalle qué información se va a almacenar en la base de datos y qué características tiene. </span></p></li><li><p><span>Un diagrama entidad-relación que muestre la estructura de vuestra base de datos. Este diagrama, en forma de imagen o esquema mostrará la estructura de la base de datos. Es probable que al elaborarlo encuentres ambigüedades en la descripción de la base de datos. Tendrás entonces que volver a la descripción y modificarla para mejorarla. Es un proceso iterativo. Identifica las entidades y los atributos importantes.</span></p></li><li><p><span>Una base de datos. Traduce el o los diagramas entidad-relación en una estructura de bases de datos relacional, con sus tablas y campos. Esta base de datos en formato digital reflejará la información de la descripción y el diagrama en forma de tablas y relaciones. Además podrá contener datos y consultas que muestren cómo puede servir la base de datos para responder a una pregunta concreta.</span></p></li></ol><p><span>Cuando lo tengas listo comprime los archivos y súbelos al classroom. Por favor, usa este esquema para nombrar el archivo comprimido: [tu_nombre]_[tus_apellidos].zip</span></p><h2 id='criterios-de-evaluación'><span>Criterios de evaluación</span></h2><p><span>Esta tarea tiene como objetivo que penséis, encontréis problemas y dudas sin resolver, las reflexionemos y aprendamos de ello. Por lo tanto, el producto a entregar está bastante abierto a vuestras necesidades y podrá tener distintas versiones. A modo de recomendación, resaltamos algunos de los aspectos importantes para evaluar si habéis adquirido las competencias que buscamos.</span></p><ol start='' ><li><p><span>Descripción literal de la base de datos</span></p><ul><li><p><span>Descripción clara y sin ambigüedad</span></p></li><li><p><span>Legibilidad y fluidez</span></p></li></ul></li><li><p><span>Diagrama entidad-relación</span></p><ul><li><p><span>Identificación de entidades, atributos de la realidad que queremos modelar, así como las relaciones entre los mismos</span></p></li><li><p><span>Justificación de las decisiones adoptadas</span></p></li></ul></li><li><p><span>Base de datos</span></p><ul><li><p><span>Traducción de los elementos anteriores a una estructura interpretable por un gestor de bases de datos relacionales: tablas, campos, relaciones.</span></p></li><li><p><span>Nivel de implementación: tablas, relaciones, datos y consultas.</span></p></li><li><p><span>Identificación de dificultades encontradas. No es lo mismo no hacer algo, que no saber hacerlo poque tengo un problema o duda que me está impidiendo avanzar...</span></p></li></ul></li></ol><div style="page-break-after: always; break-after: page;"></div><figure class='table-figure'><table><thead><tr><th><span>Descripción literal de la base de datos</span></th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th></tr></thead><tbody><tr><td><span>Se evalúa la claridad, legibilidad y fluidez en la descripción de los datos e información a incluir en la base de datos</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span>0.0</span></td><td><span>1.0</span></td><td><span>2.0</span></td><td><span>3.0</span></td><td><span>4.0</span></td><td><span>5.0</span></td></tr><tr><td>&nbsp;</td><td><span>No entrega</span></td><td><span>El texto no permite identificar la información que contendrá la base de datos</span></td><td><span>El texto describe la información a incorporar a la base de datos, pero presenta ambigüedades que limitan su implementación</span></td><td><span>El texto describe la información a incoporar permitiendo identificar las entidades y los atributos más relevantes.</span></td><td><span>El texto describe la información a incoporar permitiendo identificar las entidades, los atributos y las relaciones más relevantes.</span></td><td><span>El texto describe correctamente la información, facilitando la identificación de entidades, atributos y relaciones sin ambigüedad.</span></td></tr><tr><td><strong><span>Completitud de las entidades y sus atributos</span></strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>Se evalúa en qué medida has identificado bien las entidades contempladas en el texto descriptivo, así como sus correspondientes atributos.</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span>0.0</span></td><td><span>1.0</span></td><td><span>2.0</span></td><td><span>3.0</span></td><td><span>4.0</span></td><td><span>5.0</span></td></tr><tr><td>&nbsp;</td><td><span>No entrega</span></td><td><span>No identificación de variables ni de atributos</span></td><td><span>Mezcla de atributos con entidades</span></td><td><span>Correcta identificación de ambos conceptos</span></td><td><span>Identificación completa de atributos y entidades</span></td><td><span>Incorporas conceptos y/o atributos que mejoran la base de datos</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td><span>No has identificado correctamente ni los atributos ni las entidades.</span></td><td><span>Has mezclado ambos conceptos</span></td><td><span>Has diferenciado bien entre entidades y atributos, pero faltan alguno de cualquiera de ellos.</span></td><td><span>Están todos los atributos y entidades.</span></td><td><span>Además de considerar todos los conceptos y atributos del enunciado, lo has mejorado.</span></td></tr><tr><td><strong><span>Completitud de las relaciones entre entidades</span></strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>Se evalúa en qué medida has identificado bien las relaciones entre entidades.</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span>0.0</span></td><td><span>1.0</span></td><td><span>2.0</span></td><td><span>3.0</span></td><td><span>4.0</span></td><td><span>5.0</span></td></tr><tr><td>&nbsp;</td><td><span>No entrega</span></td><td><span>No has identificado correctamente ninguna relación.</span></td><td><span>Faltan muchas relaciones</span></td><td><span>Correcta identificación de relaciones</span></td><td><span>Identificación completa de relaciones</span></td><td><span>Incorporas nuevas relaciones que mejoran la base de datos.</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><span>Has incluído alguna relación, pero faltan muchas.</span></td><td><span>Has identificado adecuadamente la mayoría de las relaciones.</span></td><td><span>Están todas las relaciones y su cardinalidad es correcta.</span></td><td>&nbsp;</td></tr><tr><td><strong><span>Traducción del modelo entidad relación a un diagrama de bases de datos</span></strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>Se evalúa en qué medida has traducido el esquema de entidades-relaciones a un diagrama de tablas en una base de datos.</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span>0.0</span></td><td><span>1.0</span></td><td><span>2.0</span></td><td><span>3.0</span></td><td><span>4.0</span></td><td><span>5.0s</span></td></tr><tr><td>&nbsp;</td><td><span>No entrega.</span></td><td><span>Muy incompleta traducción de entidades/atributos a tablas/campos</span></td><td><span>Incompleta asignación de entidades/atributos a tablas/campos</span></td><td><span>Correcta traducción de entidades/atributos a tablas/campos</span></td><td><span>Traducción completa</span></td><td><span>Incorporas nuevas tablas y campos que mejoran la estructura.</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><span>Has traducido bien algunos elementos, pero faltan muchos.</span></td><td><span>Están realizadas correctamente casi todas las asignaciones entidad/atributo a tabla/campo.</span></td><td><span>Todas las entidades y sus atributos han sido traducidos a tablas y a campos.</span></td><td>&nbsp;</td></tr><tr><td><strong><span>Nivel de implementación</span></strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>Se evalúa el grado de implementación de la base de datos en la herramienta.</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span>0.0</span></td><td><span>1.0</span></td><td><span>2.0</span></td><td><span>3.0</span></td><td><span>4.0</span></td><td><span>5.0</span></td></tr><tr><td>&nbsp;</td><td><span>No entrega</span></td><td><span>Se han creado las tablas necesarias, pero faltan las relaciones</span></td><td><span>Se han creado las tablas y las relaciones entre las ellas, pero faltan algunas</span></td><td><span>Se han creado todas las tablas y relaciones necesarias</span></td><td><span>Se han incorporado datos a las tablas</span></td><td><span>Se ha creado una o varias consultas que muestran el uso potencial de la base de dato</span></td></tr><tr><td><strong><span>Identificación de dificultades</span></strong></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td><span>0.0</span></td><td><span>1.0</span></td><td><span>2.0</span></td><td><span>3.0</span></td><td><span>4.0</span></td><td><span>5.0</span></td></tr><tr><td>&nbsp;</td><td><span>No entrega</span></td><td><span>Las dificultades encontradas no están definidas, lo que limita su abordaje</span></td><td><span>Algunas dificultades han sido identificadas de forma poco precisa</span></td><td><span>Se detallan algunos problemas y dificultades encontradas en el proceso de implementación</span></td><td><span>Los problemas para una completa implementación de la base de datos están claramente definidos y acotados</span></td><td><span>Se proponen soluciones a las dificultades encontradas, aunque no lleguen a resolver el problema</span></td></tr></tbody></table></figure><p>&nbsp;</p><p><span>Usaré esta rúbrica para evaluar tu trabajo, pero la nota no se usará en la calificación de la asignatura.</span></p><p><span>La evaluación de este ejercicio se realizará siguiendo las siguientes fases, que se basan en la idea de re-evaluación y análisis en grupo de resultados.</span></p><ul><li><p><strong><span>Primera entrega</span></strong><span>: Los alumnos entregan el ejercicio solicitado usando el conocimiento adquirido en las sesiones teóricas.</span></p></li><li><p><strong><span>Segunda entrega</span></strong><span>: Los alumnos entregan de nuevo el ejercicio incorporando las mejoras y soluciones a los problemas encontrados durante la primera entrega.</span></p></li></ul><p>&nbsp;</p><p>&nbsp;</p></div></div>
 </body>
 </html>
